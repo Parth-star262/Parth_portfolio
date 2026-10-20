@@ -2,20 +2,19 @@
 @import "tailwindcss";
 
 :root {
-  --bg-dark: #030014;
-  --bg-card: rgba(12, 13, 30, 0.75);
-  --bg-card-hover: rgba(20, 22, 45, 0.85);
-  --bg-surface: #0a0b1e;
-  --bg-surface-2: #12142e;
+  --bg-dark: #080615;
+  --bg-card: rgba(16, 14, 32, 0.92);
+  --bg-card-hover: rgba(22, 18, 42, 0.95);
+  --bg-surface: #100e1c;
+  --bg-surface-2: #161328;
   --border-subtle: rgba(255, 255, 255, 0.08);
-  --border-glow: rgba(124, 58, 237, 0.3);
-  --text-main: #f1f1f8;
-  --text-muted: #9494c7;
-  --text-dim: #64648e;
-  
+  --border-glow: rgba(124, 58, 237, 0.28);
+  --text-main: #f4f4fb;
+  --text-muted: #a8a8c7;
+  --text-dim: #7b7b9e;
   --accent-primary: #7c3aed;
-  --accent-secondary: #6366f1;
-  --accent-cyan: #06b6d4;
+  --accent-secondary: #8b7cff;
+  --accent-cyan: #22d3ee;
   --accent-emerald: #10b981;
   --accent-amber: #f59e0b;
   --accent-rose: #f43f5e;
@@ -29,7 +28,31 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 84px;
+  scroll-padding-top: 96px;
+}
+
+:focus-visible {
+  outline: 2px solid #a78bfa;
+  outline-offset: 3px;
+}
+
+.site-container {
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: 24px;
+}
+
+@media (min-width: 768px) {
+  .site-container {
+    padding-inline: 32px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .site-container {
+    padding-inline: 48px;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -339,21 +362,13 @@ body {
   color: #ffffff;
 }
 
-@keyframes tech-marquee {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
-}
-
 .portfolio-tech-track {
-  width: max-content;
+  width: 100%;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 20px;
-  animation: tech-marquee 42s linear infinite;
+  justify-content: center;
+  gap: 10px 12px;
 }
 
 .portfolio-tech-orb {
@@ -400,8 +415,3 @@ body {
   }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .portfolio-tech-track {
-    animation: none;
-  }
-}
