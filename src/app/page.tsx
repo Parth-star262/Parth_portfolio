@@ -33,6 +33,7 @@ const github = 'https://github.com/Parth-star262';
 const linkedin = 'https://linkedin.com/in/parth-hada';
 const dsaJudgeLive = 'https://dsa-judge.vercel.app/problems';
 const dsaJudgeRepo = 'https://github.com/Parth-star262/DSA-Judge';
+const coastalRepo = 'https://github.com/Parth-star262/coastal-threat-alert-system';
 
 const projects = [
   {
@@ -48,13 +49,13 @@ const projects = [
   },
   {
     name: 'Coastal Threat Alert System',
-    eyebrow: 'Prototype · Safety-focused system',
-    summary: 'A prototype concept for detecting coastal hazards and communicating timely alerts to communities.',
+    eyebrow: 'Prototype · Data and alerting system',
+    summary: 'A weather and marine monitoring prototype that turns coastal observations into explainable risk zones and alerts.',
     description:
-      'An early-stage project focused on the product and engineering challenge of turning real-time coastal risk signals into clear, useful notifications. The repository does not include a verified public deployment or source URL.',
-    tags: ['Real-time systems', 'Alerting', 'Product prototype'],
-    highlights: ['Hazard detection concept', 'Community-first alert design'],
-    repo: null,
+      'Built with Flask, React, and PostgreSQL, the system collects OpenWeather observations, Open-Meteo marine data, and GDACS cyclone-event metadata. It combines threshold-based weather alerts, a weather-only ML classifier, abnormal sea-level detection, and city-level GeoJSON risk zones for a live dashboard.',
+    tags: ['Flask', 'React', 'PostgreSQL', 'Open-Meteo', 'GDACS'],
+    highlights: ['Marine observations and cyclone-event ingestion', 'Explainable city-level risk scoring', 'Abnormal sea-level baseline detection', 'Email and SMS notification pipeline'],
+    repo: coastalRepo,
     live: null,
   },
 ];
@@ -176,7 +177,7 @@ export default function PortfolioHomePage() {
             <div className="project-grid">
               <article className="project-card project-card-coastal">
                 <div className="card-art"><div className="radar-ring ring-one" /><div className="radar-ring ring-two" /><span className="radar-signal" /><span className="card-art-label">COASTAL / ALERTS</span></div>
-                <div className="project-card-body"><div className="project-label muted">Prototype · In progress</div><h3>Coastal Threat Alert System</h3><p>{projects[1].description}</p><div className="tag-list">{projects[1].tags.map((tag) => <span key={tag}>{tag}</span>)}</div><span className="unavailable"><span /> No public demo verified</span></div>
+                <div className="project-card-body"><div className="project-label muted">Prototype · Safety-focused data system</div><h3>Coastal Threat Alert System</h3><p>{projects[1].description}</p><div className="tag-list">{projects[1].tags.map((tag) => <span key={tag}>{tag}</span>)}</div><ul className="highlight-list">{projects[1].highlights.slice(0, 3).map((item) => <li key={item}><Check size={15} />{item}</li>)}</ul><div className="project-actions"><a href={coastalRepo} target="_blank" rel="noreferrer" className="button button-secondary">Source code <GithubIcon size={16} /></a><span className="unavailable"><span /> Deployment pending</span></div></div>
               </article>
               <div className="project-aside">
                 <div className="aside-number">02</div>
