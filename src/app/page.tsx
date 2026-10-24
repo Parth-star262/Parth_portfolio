@@ -34,7 +34,8 @@ const linkedin = 'https://linkedin.com/in/parth-hada';
 const dsaJudgeLive = 'https://dsa-judge.vercel.app/problems';
 const dsaJudgeRepo = 'https://github.com/Parth-star262/DSA-Judge';
 const coastalRepo = 'https://github.com/Parth-star262/coastal-threat-alert-system';
-const coastalLive = 'https://coastal-threat-alert-system-xkek.onrender.com';
+const coastalDashboard = 'https://coastal-threat-dashboard.onrender.com';
+const coastalApi = 'https://coastal-threat-alert-system-xkek.onrender.com';
 
 const projects = [
   {
@@ -57,7 +58,8 @@ const projects = [
     tags: ['Flask', 'React', 'PostgreSQL', 'Open-Meteo', 'GDACS'],
     highlights: ['Marine observations and cyclone-event ingestion', 'Explainable city-level risk scoring', 'Abnormal sea-level baseline detection', 'Email and SMS notification pipeline'],
     repo: coastalRepo,
-    live: coastalLive,
+    live: coastalDashboard,
+    api: coastalApi,
   },
 ];
 
@@ -178,7 +180,7 @@ export default function PortfolioHomePage() {
             <div className="project-grid">
               <article className="project-card project-card-coastal">
                 <div className="card-art"><div className="radar-ring ring-one" /><div className="radar-ring ring-two" /><span className="radar-signal" /><span className="card-art-label">COASTAL / ALERTS</span></div>
-                <div className="project-card-body"><div className="project-label muted">Live API · Safety-focused data system</div><h3>Coastal Threat Alert System</h3><p>{projects[1].description}</p><div className="tag-list">{projects[1].tags.map((tag) => <span key={tag}>{tag}</span>)}</div><ul className="highlight-list">{projects[1].highlights.slice(0, 3).map((item) => <li key={item}><Check size={15} />{item}</li>)}</ul><div className="project-actions"><a href={coastalLive} target="_blank" rel="noreferrer" className="button button-primary">Live API <ArrowUpRight size={16} /></a><a href={coastalRepo} target="_blank" rel="noreferrer" className="button button-secondary">Source code <GithubIcon size={16} /></a></div></div>
+                <div className="project-card-body"><div className="project-label muted">Live dashboard · Safety-focused data system</div><h3>Coastal Threat Alert System</h3><p>{projects[1].description}</p><div className="tag-list">{projects[1].tags.map((tag) => <span key={tag}>{tag}</span>)}</div><ul className="highlight-list">{projects[1].highlights.slice(0, 3).map((item) => <li key={item}><Check size={15} />{item}</li>)}</ul><div className="project-actions"><a href={coastalDashboard} target="_blank" rel="noreferrer" className="button button-primary">Live dashboard <ArrowUpRight size={16} /></a><a href={coastalRepo} target="_blank" rel="noreferrer" className="button button-secondary">Source code <GithubIcon size={16} /></a></div><a href={coastalApi} target="_blank" rel="noreferrer" className="text-link">View API <ArrowUpRight size={15} /></a></div>
               </article>
               <div className="project-aside">
                 <div className="aside-number">02</div>
